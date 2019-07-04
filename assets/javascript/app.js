@@ -87,13 +87,56 @@ $('#mainquestions').append('<div id=question8>' + qDiv_8 + '</div>')
 $('#mainquestions').append('<div id=question9>' + qDiv_9 + '</div>')
 $('#mainquestions').append('<div id=question10>' + qDiv_10 + '</div>')
 
-for(var i = 0; i < qA.quest1.a.length; i++){
-    var aDiv = (qA.quest1.a[i])
-    $('#question1').append('<input type=radio>' + aDiv + '</input>')
+function genAnswers() {
+for(var a = 0; a < qA.quest1.a.length; a++){
+    var aDiv = (qA.quest1.a[a])
+    $('#question1').append('<input type=radio name=answer required>' + aDiv + '</radio>');
     console.log("loop is working")
-    console.log(qA.quest1.a[i])
+    console.log(qA.quest1.a[a])
 }
-   
+for(var b = 0; b < qA.quest2.a.length; b++) {
+    var aDiv2 = (qA.quest2.a[b]);
+    $('#question2').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var c = 0; c < qA.quest3.a.length; c++) {
+    var aDiv2 = (qA.quest3.a[c]);
+    $('#question3').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var d = 0; d < qA.quest4.a.length; d++) {
+    var aDiv2 = (qA.quest4.a[d]);
+    $('#question4').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var e = 0; e < qA.quest5.a.length; e++) {
+    var aDiv2 = (qA.quest5.a[e]);
+    $('#question5').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var f = 0; f < qA.quest6.a.length; f++) {
+    var aDiv2 = (qA.quest6.a[f]);
+    $('#question6').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var g = 0; g < qA.quest7.a.length; g++) {
+    var aDiv2 = (qA.quest7.a[g]);
+    $('#question7').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var h = 0; h < qA.quest2.a.length; h++) {
+    var aDiv2 = (qA.quest8.a[h]);
+    $('#question8').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+for(var i = 0; i < qA.quest9.a.length; i++) {
+    var aDiv2 = (qA.quest9.a[i]);
+    $('#question9').append('<input type=radio name=answer required>' + aDiv2 + '</radio>');
+    console.log("loop question 2 is working")
+}
+}
+
+genAnswers()
 
 
 
