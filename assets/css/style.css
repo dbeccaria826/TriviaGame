@@ -1,3 +1,16 @@
 body {
     font-family: 'Rubik Mono One', sans-serif;
 }
+
+#main-content {
+    text-align: center;
+    margin: 0 auto;
+}
+#countdown {
+    background: teal;
+}
+#startGame {
+    font-family: 'Rubik Mono One', sans-serif;
+    background: teal;
+
+}
