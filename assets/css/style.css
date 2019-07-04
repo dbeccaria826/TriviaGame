@@ -5,8 +5,8 @@ body {
 #main {
     width: 1200px;
     height: 900px;
-    margin: 0px auto;
-    background-image: url('https://fanart.tv/api/download.php?type=download&image=242764&section=3');
+    margin: 0 auto;
+    background-image: url("../images/mandy-bground.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -18,6 +18,12 @@ body {
 #mainquestions {
     text-align: center;
     background: rgba(255, 30, 30, 0.664);
+}
+#showresult {
+    text-align: center;
+    width: 300px;
+    background: rgba(255, 30, 30, 0.664);
+    margin: 0 auto;
 }
 
 #countdown {
