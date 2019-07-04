@@ -7,17 +7,19 @@ $(document).ready(function () {
     //Question objects. Properties are questions/answers/ and correct answer
  
 $('#countdown').append('<button id=startGame>Start Game</button>').css('text-align', 'center')
-
+ $('#showresult').hide()
 
 $('#startGame').on('click', function(){ 
     var count = 45
-    startGame()
+    startGame() 
+   
     var interVal = setInterval (function() {
          $('#countdown').text('00:' + --count)
-         
+        
         console.log('countdown works')
         if(count === 0) {
             $('#mainquestions').hide()
+            $('#showresult').text('How Did You Do?').show().css('border', '1px solid black')
             clearInterval(interVal);
             console.log("if statement works")
         }   

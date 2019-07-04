@@ -2,15 +2,29 @@ body {
     font-family: 'Rubik Mono One', sans-serif;
 }
 
+#main {
+    width: 1200px;
+    height: 900px;
+    margin: 0px auto;
+    background-image: url('https://fanart.tv/api/download.php?type=download&image=242764&section=3');
+    background-size: cover;
+    background-position: center;
+}
+
 #main-content {
     text-align: center;
     margin: 0 auto;
 }
-#countdown {
-    background: teal;
+#mainquestions {
+    text-align: center;
+    background: rgba(255, 30, 30, 0.664);
 }
+
+#countdown {
+    background: rgba(243, 23, 188, 0.664);
+}
+
 #startGame {
     font-family: 'Rubik Mono One', sans-serif;
-    background: teal;
-
+    background: rgb(238, 15, 182);
 }
