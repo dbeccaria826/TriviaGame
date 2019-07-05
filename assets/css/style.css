@@ -18,6 +18,7 @@ body {
 #mainquestions {
     text-align: center;
     background: rgba(255, 30, 30, 0.664);
+    line-height: 40px;
 }
 #showresult {
     text-align: center;

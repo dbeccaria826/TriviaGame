@@ -11,11 +11,12 @@ $('#countdown').append('<button id=startGame>Start Game</button>').css('text-ali
 
 $('#startGame').on('click', function(){ 
     var count = 45
-    startGame() 
+    
+    getQuest()
    
     var interVal = setInterval (function() {
          $('#countdown').text('00:' + --count)
-        
+            
         console.log('countdown works')
         if(count === 0) {
             $('#mainquestions').hide()
@@ -31,71 +32,69 @@ $('#startGame').on('click', function(){
     
 //Storing each question and answer object inside of an array for easier access later on.
     
-    var qA = [{
-       q: 'Who directed Mandy?',
-       a: 'Panos Cosmatos',
-       b: 'Wes Anderson',
-       c: 'Martin Scorsese',
-       d: 'Francis Ford Coppola',
-       right: 'Panos Cosmatos'
-    },
-    {
-        q:'What is the name of Nicholas Cage\'s Character?',
-        a: 'Arnold Miller',
-        b: 'Red Miller',
-        c: 'John Miller',
-        d: 'Fred Miller',
-        right: 'Red Miller'
-    },     
+    var qA = { 
         
     
-    { 
-        q:'What is the name of the horn the cultists use to summon the bikers?',
-        a: 'Horn of the Dawn',
-        b: 'Horn of the Abyss',
-        c: 'Horn of Abraxas',
-        d: 'Horn of Twilight',
-        right: 'Horn of Abraxas'
+       q0: 'Who directed Mandy?',
+       opt0: ['Panos Cosmatos', 'Wes Anderson','Martin Scorsese','Tod Solonze'],
+       
+       
+    
 
-    },
+        q1:'What is the name of Nicholas Cage\'s Character?',
+        opt1: ['Arnold Miller', 'Red Miller','John Miller','Fred Miller'],
+       
+       
+         
         
-    {
-        q: 'What drug does the Chemist in Mandy manufacture?',
-        a: 'Meth-amphetamine',
-        b: 'LSD',
-        c: 'Cocaine',
-        d: 'Heroin',
-        right: 'LSD'
+    
+     
+        q2:'What is the name of the horn the cultists use to summon the bikers?',
+        opt2: ['Horn of the Dawn','Horn of the Abyss','Horn of Abraxas','Horn of Darkness'],
+        
+
+    
+        
+    
+        q3: 'What is the name of the cult?',
+        opt3: ['Children of the Night','Children of the New Dawn','Children of the Sun','Children of the Corn'],
+        
+       
             
-    },    
-    {
-        q:'What is used to restrain the main character when he is taken by the bikers?',
-        a: 'Rope',
-        b: 'Duct tape',
-        c: 'Barded wire',
-        d: 'Extension cord',
-        right: 'Barbed wire'
-    }, 
-    {
-        q: 'What planet does Mandy mention is her favorite?',
-        a: 'Saturn',
-        b: 'Uranus',
-        c: 'Mars',
-        d: 'Jupiter',
-        right: 'Jupiter'
-    }       
+        
+        q4:'What is used to restrain the main character when he is taken by the bikers?',
+        opt4: ['Rope', 'Duct Tape','Barbed Wire','Extension Cord'],
+        
+        
+     
+        q5: 'What planet does Mandy mention is her favorite?',
+        opt5: ['Saturn', 'Uranus','Pluto','Jupiter']
+       
+    }        
+           
         
     
-]
 
-console.log(qA[0].q.length)
+
+console.log(qA)
 console.log(typeof(qA))
-function startGame() {
-    for(var i = 0; i < qA.length; i++) {
-        quest = qA[i].q
-        $('#mainquestions').append('<div>' + quest + '</div>')
+console.log('q' in qA)
+var ent = Object.entries(qA)
+
+
+
+function getQuest() {
+        for(ent of ent) {
+            $('#mainquestions').append('<div id=questions >' + ent + '</div>')
+        }
+        
+      
+      
     }
-}
+    
+
+
+
 
 
 
