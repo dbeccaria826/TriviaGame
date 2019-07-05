@@ -3,11 +3,11 @@ body {
 }
 
 #main {
-    width: 1200px;
-    height: 900px;
+    width: 900px;
+    height: 1200px;
     margin: 0 auto;
     background-image: url("../images/mandy-bground.jpg");
-    background-size: cover;
+    background-size: 900px 1200px;
     background-position: center;
 }
 
@@ -34,4 +34,7 @@ body {
 #startGame {
     font-family: 'Rubik Mono One', sans-serif;
     background: rgb(238, 15, 182);
+}
+button {
+    height: 100px;
 }
