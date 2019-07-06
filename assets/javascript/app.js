@@ -10,6 +10,7 @@ $('p').css('background', 'red');
 $('#countdown').append('<button id=startGame>Start Game</button>').css('text-align', 'center')
 $('#showresult').hide()
 
+
  
 
 $('#startGame').on('click', function(){ 
@@ -96,7 +97,7 @@ console.log(qA[0].opt0)
 //Displaying questions and answer options onto the page
 
 function getQuest() {
-    
+       
         for(var i  = 0; i < qA.length; i++) {
             var question = qA[i].q
             $('#mainquestions').append('<div id=question' + i + '>' + question + '</div>');
@@ -127,48 +128,59 @@ function getQuest() {
             var answer5 = qA[5].opt[f];
             $('#question5').append('<input class=style type=radio name=answer5 value =' + f +'>' + answer5);
         } 
-       
+       showRes()
       
 }
         
 //Checking if user selected the right answer/no answer at all/ or the wrong answer  
 
 function checkAnswer() {
+ // grab the input elements in each question console.log($(#question0 input)); 
 
-    const correctAnswers = [0,3,4,5,]
-   
-    // grab the input elements in each question console.log($(#question0 input)); 
-    // console.log($('#question0 input'));
+
+    correct = 0
+  // console.log($('#question0 input'));
     let grabbedAnswers = [...$('#question0 input')];
-    
-
-    //document.querySelectorAll('input');
-
-    // loop thru the grabbed inputs and see which one is checked
+// loop thru the grabbed inputs and see which one is checked
+    console.log(grabbedAnswers)
+    const correctAnswers = [0,1,2,3]
+// if the the chosenAnswer  is the same as the right answer 
+       
     let chosenAnswer = grabbedAnswers.find(function(x) {
         return x.checked === true;
     })
 
-    let chosenAnswerValue = $(chosenAnswer).val()
+    let chosenValue = $(chosenAnswer).val()
 
-    if (chosenAnswerValue === correctAnswers[0]) {
-        answersCorrect++;
+    if (chosenValue === correctAnswers[0]) {
+        correct++;
     }
-
-    console.log(chosenAnswer);
-    console.log(chosenAnswerValue);
     
 
-    // if the the chosenAnswer  is the same as the right answer 
-        // increment right answers
+     // increment right answers
 
     
-    // console.log(grabbedAnswers);
-    // debugger;
+   
+   // debugger;
+    
+  
+
+    
+       
+
+    
+    
+    
     
 }
 
-    
+function showRes() {
+    $('#mainquestions').append('<button id=showbutton>Submit</button>')
+    $('#showbutton').on('click', function() {
+         $('#mainquestions').hide()
+         $('#showresult').text(checkAnswer()).css('border', '1px solid black')
+    })
+}
 
 
 
