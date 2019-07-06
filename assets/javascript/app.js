@@ -232,7 +232,7 @@ function showRes() {
             incorrect++
             $('#showresult').text('You got ' + incorrect + ' wrong').show()
     }
-    /*
+    
         console.log(chosenValue)
     //-------q2
     if(chosenValue1 == answers[1]) {
@@ -290,7 +290,7 @@ function showRes() {
         incorrect++
         $('#showresult').text('You got ' + incorrect + ' wrong').show()
     }
-    */
+    
 }       
 
 
