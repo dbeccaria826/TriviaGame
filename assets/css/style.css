@@ -11,8 +11,6 @@ body {
 
 #countdown {
     font-size: 30px;
-    background: red;
-    width: 800px;
     margin: 0 auto;
 }
 
@@ -20,7 +18,6 @@ body {
     text-align: center;
     margin: 0 auto;
     width: 800px;
-    
 }
 
 #mainquestions {

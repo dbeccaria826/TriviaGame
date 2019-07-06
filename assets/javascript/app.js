@@ -126,41 +126,13 @@ function getQuest() {
             var question = qA[i].q
             $('#mainquestions').append('<div id=question' + i + '>' + question + '</div><br>');
             console.log('loop is working');
+            for(let a = 0; a < qA[i].opt.length; a++) {
+                getAnswer = qA[i].opt[a];
+                console.log(getAnswer)
+                $('#question' + i).append('<br> <input type=radio name=answer' + a +' value=' + a +'>' + getAnswer)
+            }
         }
-        for(var a = 0; a < qA[0].opt.length; a++) {
-            var answer = qA[0].opt[a];
-            $('#question0').append('<br><input class=style type=radio name=answer0 value =' + a +'>' + answer)
-           
-        }
-        for(var b = 0; b < qA[1].opt.length; b++) {
-            var answer1 = qA[1].opt[b];
-            $('#question1').append('<br><input class=style type=radio name=answer1 value =' + b +'>' + answer1);
-        }
-        for(var c = 0; c < qA[2].opt.length; c++) {
-            var answer2 = qA[2].opt[c];
-            $('#question2').append('<br><input class=style type=radio name=answer2 value =' + c +'>' + answer2);
-        }
-        for(var d = 0; d < qA[3].opt.length; d++) {
-            var answer3 = qA[3].opt[d];
-            $('#question3').append('<br><input class=style type=radio name=answer3 value ='+ d +'>' + answer3);
-        }
-        for(var e = 0; e < qA[4].opt.length;e++) {
-            var answer4 = qA[4].opt[e];
-            $('#question4').append('<br><input class=style type=radio name=answer4 value =' + e + '>' + answer4);
-        }
-        for(var f = 0; f < qA[5].opt.length; f++) {    
-            var answer5 = qA[5].opt[f];
-            $('#question5').append('<br><input class=style type=radio name=answer5 value =' + f +'>' + answer5);
-        } 
-        for(var g = 0; g < qA[6].opt.length; g++) {
-            var answer6 = qA[6].opt[g];
-            $('#question6').append('<br><input class=style type=radio name answer6 value=' + g + '>' + answer6)
-        }
-        for(var h = 0; h < qA[7].opt.length; h++) {
-            var answer7 = qA[7].opt[h];
-            $('#question7').append('<br><input class=style type=radio name answer7 value=' + h + '>' + answer7)
-        }
-       
+        
       
 }
         
