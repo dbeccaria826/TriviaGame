@@ -13,16 +13,16 @@ $('#countdown').append('<button id=startGame>Start Quiz</button>').css('text-ali
 
 
 $('#startGame').on('click', function(){ 
-    var count = 45;
+    let count = 45;
    
     getQuest();
     $('#showresult').hide();
     
 
-    var interVal = setInterval (function() {
+    let interVal = setInterval (function() {
          $('#countdown').text('00:' + --count)
          
-        console.log('countdown works')
+      
         if(count === 0) {
         $('#mainquestions').hide()
         
@@ -31,7 +31,7 @@ $('#startGame').on('click', function(){
           
            
             clearInterval(interVal);
-            console.log("if statement works")
+            
         }   
     }, 1000)
         
@@ -49,7 +49,7 @@ $('#startGame').on('click', function(){
     
 //Storing each question and answer object inside of an array for easier access later on.
     
-    var qA = [ 
+    const qA = [ 
         
     
     { 
@@ -111,7 +111,7 @@ $('#startGame').on('click', function(){
     
 
 
-console.log(qA[0].opt)
+
 
 
 
@@ -119,25 +119,25 @@ console.log(qA[0].opt)
 
 
 //Displaying questions and answer options onto the page
-
+//Need to add separate names for input tags so user can only pick one answer for each question **** resolved.
 function getQuest() {
       
-        for(var i  = 0; i < qA.length; i++) {
-            var question = qA[i].q
+    for(let i  = 0; i < qA.length; i++) {
+            let question = qA[i].q
             $('#mainquestions').append('<div id=question' + i + '>' + question + '</div><br>');
-            console.log('loop is working');
-            for(let a = 0; a < qA[i].opt.length; a++) {
+            
+        for(let a = 0; a < qA[i].opt.length; a++) {
                 getAnswer = qA[i].opt[a];
-                console.log(getAnswer)
-                $('#question' + i).append('<br> <input type=radio name=answer' + a +' value=' + a +'>' + getAnswer)
-            }
+                
+                $('#question' + i).append('<br> <input class=user type=radio name=answer' + i + ' value=' + a +'>' + getAnswer)
         }
-        
-      
+    }
+    
 }
         
 //Checking if user selected the right answer/no answer at all/ or the wrong answer  
-
+//Currently only displays number correct if user chose right answer and number of inncorrect if user didn't choose at all or 
+//chose wrong respectively
 function showRes() {
  // grab the input elements in each question console.log($(#question0 input)); 
     unanswered = 0;
@@ -156,35 +156,41 @@ function showRes() {
     let getAnswer6 = [...$('#question6 input')];
     let getAnswer7 = [...$('#question7 input')];
 
-   
+   console.log(getAnswer)
     
         
     let userAnswer = getAnswer.find(function(x) {
         return x.checked === true;
     })
-    
+   
     let userAnswer1 = getAnswer1.find(function(x) {
         return x.checked === true;
     })
+    
     let userAnswer2 = getAnswer2.find(function(x) {
         return x.checked === true;
     })  
+   
     let userAnswer3 = getAnswer3.find(function(x) {
         return x.checked === true;
     })
+  
     let userAnswer4 = getAnswer4.find(function(x) {
         return x.checked === true;
     })
+
     let userAnswer5 = getAnswer5.find(function(x) {
         return x.checked === true;
     })
-
+  
     let userAnswer6 = getAnswer6.find(function(x){
         return x.checked === true;
     })
+    
     let userAnswer7 = getAnswer7.find(function(x) {
         return x.checked === true;
     })
+   
 
     let chosenValue = $(userAnswer).val()
     let chosenValue1 = $(userAnswer1).val()
@@ -194,6 +200,8 @@ function showRes() {
     let chosenValue5 = $(userAnswer5).val()
     let chosenValue6 = $(userAnswer6).val()
     let chosenValue7 = $(userAnswer7).val()
+
+    
     //------q1
     if (chosenValue == answers[0] || userAnswer === true) {
         correct++;
@@ -205,7 +213,7 @@ function showRes() {
             $('#showresult').text('You got ' + incorrect + ' wrong').show()
     }
     
-        console.log(chosenValue)
+        
     //-------q2
     if(chosenValue1 == answers[1]) {
         correct++
