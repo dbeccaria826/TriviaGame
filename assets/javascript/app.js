@@ -237,7 +237,8 @@ function showRes() {
     //-------q2
     if(chosenValue1 == answers[1]) {
         correct++
-        $('#showresult').text('You got ' + correct + ' right').show()
+        
+        $('#showresult').text('You got ' + correct + incorrect + unanswered + ' right').show()
     } else {
         incorrect++
         $('#showresult').text('You got ' + incorrect + ' wrong').show()

@@ -11,24 +11,31 @@ body {
 
 #countdown {
     font-size: 30px;
+    background: red;
+    width: 800px;
+    margin: 0 auto;
 }
 
 #main-content {
     text-align: center;
     margin: 0 auto;
+    width: 800px;
+    
 }
 
 #mainquestions {
     text-align: center;
-    background: rgba(255, 30, 30, 0.664);
+    background: rgba(245, 16, 16, 0.986);
     line-height: 40px;
     border: 1px solid black;
+    width: 800px;
+    margin: 0 auto;
 }
 
 #showresult {
     text-align: center;
     width: 300px;
-    background: rgba(255, 30, 30, 0.664);
+    background: rgb(255, 30, 30);
     margin: 0 auto;
 }
 
@@ -37,7 +44,7 @@ body {
     background: rgb(238, 15, 182);
     position: relative;
     left: 15px;
-    top: 250px;
+    top: 300px;
     height: 100px;
     width: 300px;
 }
