@@ -1,4 +1,4 @@
-//Create 10 questions the user can answer in 60 seconds.
+//Create 8 questions the user can answer in a given amount of seconds.
 //4 answers per question, multiple choice.
 //Timer counts down when game starts (not on page load) Game start button = timer begins and game loads
 //At the end of the game right and wrong answers are added up. Player can see how well they did.
@@ -13,7 +13,7 @@ $('#countdown').append('<button id=startGame>Start Quiz</button>').css('text-ali
 
 
 $('#startGame').on('click', function(){ 
-    var count = 15;
+    var count = 45;
    
     getQuest();
     $('#showresult').hide();
@@ -226,7 +226,7 @@ function showRes() {
     if (chosenValue == answers[0] || userAnswer === true) {
         correct++;
         $('#showresult').text('You got: ' + correct + ' right').show()
-      
+        
         console.log('check answer if statement works')
     } else {
             incorrect++
