@@ -3,23 +3,28 @@ body {
 }
 
 #main {
-    width: 900px;
-    height: 1200px;
-    margin: 0 auto;
+    height: 2500px;
     background-image: url("../images/mandy-bground.jpg");
-    background-size: 900px 1200px;
+    background-size: cover;
     background-position: center;
+}
+
+#countdown {
+    font-size: 30px;
 }
 
 #main-content {
     text-align: center;
     margin: 0 auto;
 }
+
 #mainquestions {
     text-align: center;
     background: rgba(255, 30, 30, 0.664);
     line-height: 40px;
+    border: 1px solid black;
 }
+
 #showresult {
     text-align: center;
     width: 300px;
@@ -35,5 +40,11 @@ body {
     top: 250px;
     height: 100px;
     width: 300px;
-    
+}
+
+#showresultsnow {
+    font-family: 'Rubik Mono One', sans-serif;
+    background: rgb(238, 15, 182);
+    height: 100px;
+    width: 300px;
 }
