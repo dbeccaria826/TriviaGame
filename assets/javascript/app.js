@@ -12,7 +12,6 @@ $('#countdown').append('<button id=startGame>Start Quiz</button>').css('text-ali
 
 
 
-
 $('#startGame').on('click', function(){ 
     var count = 15;
    
