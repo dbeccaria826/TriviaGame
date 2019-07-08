@@ -109,7 +109,7 @@ function getQuest() {
 //Checking if user selected the right answer/no answer at all/ or the wrong answer  
 //Currently only displays number correct if user chose right answer and number of inncorrect if user didn't choose at all or 
 //chose wrong respectively
-//Following code is garbage but it works. Need to refactor. Want to use switch statement.
+//Refactor at some point.
 function showRes() {
     
  // grab the input elements in each question console.log($(#question0 input)); 
@@ -128,21 +128,98 @@ function showRes() {
         } else if(userClick !== answers[0]) {
             console.log('1st else if works')
             incorrect++
-            $('#incorrect').text(incorrect)
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
     })   
-
     $('.user1').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
         if(userClick === answers[1]) {
-            console.log('2nd if works')
+            
             correct++
             $('#correct').text(correct)
         } else if(userClick !== answers[1]) {
-            console.log('2nd else if works')
+            
             incorrect++
-            $('#incorrect').text(incorrect)
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user2').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[2]) {
+            
+            correct++
+            $('#correct').text(correct)
+        } else if(userClick !== answers[2]) {
+            
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user3').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[1]) {
+            console.log('third if works')
+            correct++
+            $('#correct').text(correct)
+        } else if(userClick !== answers[1]) {
+            
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user4').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[2]) {
+            
+            correct++
+            $('#correct').text(correct)
+        } else if(userClick !== answers[2]) {
+            console.log('fourth else if works')
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user5').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[3]) {
+            
+            correct++
+            $('#correct').text(correct)
+        } else if(userClick !== answers[3]) {
+            console.log('fifth else if works')
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user6').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[0]) {
+           
+            correct++
+            $('#correct').text(correct)
+        } else if(userClick !== answers[0]) {
+            console.log('sixth else if works')
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
+        } 
+    }) 
+    $('.user7').on('click', function() { 
+        answers;
+        let userClick = parseInt($(this).attr('value'))
+        if(userClick === answers[2]) {
+           
+            correct++
+            $('#correct').text('You got: ' + correct + ' right, buster')
+        } else if(userClick !== answers[2]) {
+            
+            incorrect++
+            $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
     }) 
            
