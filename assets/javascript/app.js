@@ -109,15 +109,18 @@ function getQuest() {
 //Checking if user selected the right answer/no answer at all/ or the wrong answer  
 //Currently only displays number correct if user chose right answer and number of inncorrect if user didn't choose at all or 
 //chose wrong respectively
+//Checking user guesses with a series of on click event listeners, still need to figure out a way to log no answer
+//tried userClick === undefined and null but noanswer would not print to the document.
 //Refactor at some point.
 function showRes() {
     
- // grab the input elements in each question console.log($(#question0 input)); 
+ 
     noanswer = 0;
     incorrect = 0;
     correct = 0;
+    //Correct answer array, not readily available to people who decide to inspect the source code
     let answers = [0,1,2,1,2,3,0,2];
-    //Matching values stored in this array to values of the input converted to an array.
+    
     $('.user0').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
