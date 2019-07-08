@@ -45,6 +45,9 @@ body {
     height: 100px;
     width: 300px;
 }
+#restart{
+    background: rgb(255, 0, 0);
+}
 
 #showresultsnow {
     font-family: 'Rubik Mono One', sans-serif;
