@@ -125,11 +125,11 @@ function showRes() {
         answers;
         let userClick = parseInt($(this).attr('value'))
         if(userClick === answers[0]) {
-            console.log('first if works')
+            
             correct++
             $('#correct').text(correct)
         } else if(userClick !== answers[0]) {
-            console.log('1st else if works')
+            
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
@@ -163,11 +163,11 @@ function showRes() {
     $('.user3').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
-        if(userClick === answers[1]) {
-            console.log('third if works')
+        if(userClick === answers[3]) {
+           
             correct++
             $('#correct').text(correct)
-        } else if(userClick !== answers[1]) {
+        } else if(userClick !== answers[3]) {
             
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
@@ -176,12 +176,12 @@ function showRes() {
     $('.user4').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
-        if(userClick === answers[2]) {
+        if(userClick === answers[4]) {
             
             correct++
             $('#correct').text(correct)
-        } else if(userClick !== answers[2]) {
-            console.log('fourth else if works')
+        } else if(userClick !== answers[4]) {
+           
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
@@ -189,12 +189,12 @@ function showRes() {
     $('.user5').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
-        if(userClick === answers[3]) {
+        if(userClick === answers[5]) {
             
             correct++
             $('#correct').text(correct)
-        } else if(userClick !== answers[3]) {
-            console.log('fifth else if works')
+        } else if(userClick !== answers[5]) {
+          
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
@@ -202,12 +202,12 @@ function showRes() {
     $('.user6').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
-        if(userClick === answers[0]) {
+        if(userClick === answers[6]) {
            
             correct++
             $('#correct').text(correct)
-        } else if(userClick !== answers[0]) {
-            console.log('sixth else if works')
+        } else if(userClick !== answers[6]) {
+            
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
         } 
@@ -215,11 +215,11 @@ function showRes() {
     $('.user7').on('click', function() { 
         answers;
         let userClick = parseInt($(this).attr('value'))
-        if(userClick === answers[2]) {
+        if(userClick === answers[7]) {
            
             correct++
             $('#correct').text('You got: ' + correct + ' right, buster')
-        } else if(userClick !== answers[2]) {
+        } else if(userClick !== answers[7]) {
             
             incorrect++
             $('#incorrect').text('You got: ' + incorrect + ' wrong, buster')
