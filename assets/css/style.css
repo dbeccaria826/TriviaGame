@@ -46,7 +46,10 @@ body {
     width: 300px;
 }
 #restart{
-    background: rgb(255, 0, 0);
+    background: rgb(238, 15, 182);
+    height: 100px;
+    width: 300px;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 #showresultsnow {
